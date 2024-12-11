@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Apply thin scrollbar globally */
+* {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #d1d5db transparent; /* Light thumb, transparent track for Firefox */
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 4px; /* Thin scrollbar */
+    height: 4px; /* Thin horizontal scrollbar */
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background: transparent; /* Transparent track */
+    border: none; /* Remove any default borders */
+}
+
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: #d1d5db; /* Light grey color for the thumb */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b0b0b0; /* Slightly darker grey on hover */
+}
+
+/* Hide scrollbar arrows */
+::-webkit-scrollbar-button {
+    display: none !important; /* Remove scrollbar arrows */
+}
