@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/EpicPOS/static/css/main.a54f5bf3.css",
+    "main.js": "/EpicPOS/static/js/main.9ea972e8.js",
+    "static/js/511.76e0c975.chunk.js": "/EpicPOS/static/js/511.76e0c975.chunk.js",
+    "index.html": "/EpicPOS/index.html",
+    "main.a54f5bf3.css.map": "/EpicPOS/static/css/main.a54f5bf3.css.map",
+    "main.9ea972e8.js.map": "/EpicPOS/static/js/main.9ea972e8.js.map",
+    "511.76e0c975.chunk.js.map": "/EpicPOS/static/js/511.76e0c975.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a54f5bf3.css",
+    "static/js/main.9ea972e8.js"
+  ]
+}
