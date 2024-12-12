@@ -72,11 +72,10 @@ const Suppliers = () => {
 
     return (
         <div className="container mx-auto max-w-6xl p-6">
+            <h1 className="font-bold mb-4 text-lg">Suppliers</h1>
             {/* Header */}
             <header className="flex items-center justify-between bg-white rounded mb-4">
-                <Typography variant="h5" component="h1" className="font-semibold">
-                    Suppliers
-                </Typography>
+                {/* Left-aligned elements */}
                 <div className="flex items-center">
                     <TextField
                         variant="outlined"
@@ -84,10 +83,10 @@ const Suppliers = () => {
                         placeholder="Search"
                         value={searchQuery}
                         onChange={handleSearch}
-                        style={{ marginRight: "1rem" }}
+                        style={{marginRight: "1rem"}}
                     />
                     {suppliers.length > 0 && (
-                        <div style={{ marginRight: "1rem" }}>
+                        <div style={{marginRight: "1rem"}}>
                             <Button
                                 variant={viewMode === "grid" ? "contained" : "outlined"}
                                 onClick={() => setViewMode("grid")}
@@ -103,18 +102,19 @@ const Suppliers = () => {
                                 }}
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                     stroke-linejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-grid-dots">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M5 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                    <path d="M19 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                    <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                    <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                    <path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                    <path d="M19 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                     fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                                     strokeLinejoin="round"
+                                     className="icon icon-tabler icons-tabler-outline icon-tabler-grid-dots">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M5 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+                                    <path d="M19 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+                                    <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+                                    <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+                                    <path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+                                    <path d="M19 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
                                 </svg>
                             </Button>
 
@@ -132,20 +132,24 @@ const Suppliers = () => {
                                 }}
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                     stroke-linejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-list">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M9 6l11 0" />
-                                    <path d="M9 12l11 0" />
-                                    <path d="M9 18l11 0" />
-                                    <path d="M5 6l0 .01" />
-                                    <path d="M5 12l0 .01" />
-                                    <path d="M5 18l0 .01" />
+                                     fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                                     strokeLinejoin="round"
+                                     className="icon icon-tabler icons-tabler-outline icon-tabler-list">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M9 6l11 0"/>
+                                    <path d="M9 12l11 0"/>
+                                    <path d="M9 18l11 0"/>
+                                    <path d="M5 6l0 .01"/>
+                                    <path d="M5 12l0 .01"/>
+                                    <path d="M5 18l0 .01"/>
                                 </svg>
                             </Button>
-
                         </div>
                     )}
+                </div>
+
+                {/* Right-aligned Add New Supplier button */}
+                <div className="flex items-center">
                     <Button
                         variant="contained"
                         onClick={handleAddModalOpen}
@@ -171,7 +175,6 @@ const Suppliers = () => {
                     </Button>
                 </div>
             </header>
-
             {/* Supplier Display Section */}
             {filteredSuppliers.length === 0 ? (
                 <Box
@@ -185,7 +188,7 @@ const Suppliers = () => {
                             src="https://mobiles.sahabautos.com/images/DataNotFound.svg?a6502a0b1c3c557085d25733cdff0872"
                             alt="Data Not Found"
                             className="mx-auto mb-4 h-20"
-                            style={{ width: "50%" }}
+                            style={{width: "50%"}}
                         />
                         <Typography variant="h6" gutterBottom>
                             Supplier Data Not Found
@@ -208,7 +211,7 @@ const Suppliers = () => {
                             sx={{
                                 backgroundColor: '#2D72B4',
                                 color: 'white',
-                                marginTop:1,
+                                marginTop: 1,
                                 height: 40,
                                 '&:hover': {
                                     backgroundColor: '#245a8d',
@@ -222,9 +225,11 @@ const Suppliers = () => {
             ) : viewMode === "grid" ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredSuppliers.map((supplier) => (
-                        <Card key={supplier.id} sx={{ maxWidth: 345, cursor: "pointer" }} onClick={() => handleDetailsModalOpen(supplier)}>
+                        <Card key={supplier.id} sx={{maxWidth: 345, cursor: "pointer"}}
+                              onClick={() => handleDetailsModalOpen(supplier)}>
                             <CardContent>
-                                <Avatar alt={supplier.name} src="/static/images/avatar/1.jpg" sx={{ width: 56, height: 56 }} />
+                                <Avatar alt={supplier.name} src="/static/images/avatar/1.jpg"
+                                        sx={{width: 56, height: 56}}/>
                                 <Typography variant="h6">{supplier.name}</Typography>
                                 <Typography variant="body2" color="textSecondary">{supplier.company}</Typography>
                             </CardContent>
@@ -240,7 +245,7 @@ const Suppliers = () => {
                         rowsPerPageOptions={[5]}
                         onRowClick={(params) => handleDetailsModalOpen(params.row)}
                         disableSelectionOnClick
-                        sx={{ minHeight: 400 }}
+                        sx={{minHeight: 400}}
                     />
                 </div>
             )}
@@ -256,35 +261,35 @@ const Suppliers = () => {
                         fullWidth
                         margin="normal"
                         value={newSupplier.name}
-                        onChange={(e) => setNewSupplier({ ...newSupplier, name: e.target.value })}
+                        onChange={(e) => setNewSupplier({...newSupplier, name: e.target.value})}
                     />
                     <TextField
                         label="Phone"
                         fullWidth
                         margin="normal"
                         value={newSupplier.phone}
-                        onChange={(e) => setNewSupplier({ ...newSupplier, phone: e.target.value })}
+                        onChange={(e) => setNewSupplier({...newSupplier, phone: e.target.value})}
                     />
                     <TextField
                         label="Email"
                         fullWidth
                         margin="normal"
                         value={newSupplier.email}
-                        onChange={(e) => setNewSupplier({ ...newSupplier, email: e.target.value })}
+                        onChange={(e) => setNewSupplier({...newSupplier, email: e.target.value})}
                     />
                     <TextField
                         label="Company"
                         fullWidth
                         margin="normal"
                         value={newSupplier.company}
-                        onChange={(e) => setNewSupplier({ ...newSupplier, company: e.target.value })}
+                        onChange={(e) => setNewSupplier({...newSupplier, company: e.target.value})}
                     />
                     <TextField
                         label="Address"
                         fullWidth
                         margin="normal"
                         value={newSupplier.address}
-                        onChange={(e) => setNewSupplier({ ...newSupplier, address: e.target.value })}
+                        onChange={(e) => setNewSupplier({...newSupplier, address: e.target.value})}
                     />
                     <Box className="flex justify-end mt-4">
                         <Button

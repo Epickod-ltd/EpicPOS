@@ -155,6 +155,7 @@ const PurchaseStock = () => {
 
     return (
         <div className="p-6">
+            <h1 className="font-bold mb-4 text-lg">Purchases & Stock</h1>
             {/* Header with Search Bar and Add Item Button */}
             <div className="flex justify-between items-center mb-6">
                 <input
@@ -221,7 +222,7 @@ const PurchaseStock = () => {
                                     Quantity
                                 </TableSortLabel>
                             </TableCell>
-                            <TableCell align="right" >Type</TableCell>
+                            <TableCell align="right">Type</TableCell>
                             <TableCell align="right">Purchase Price</TableCell>
                             <TableCell align="right">Sale Price</TableCell>
                             <TableCell align="right">Wholesale Price</TableCell>

@@ -72,11 +72,10 @@ const Customers = () => {
 
     return (
         <div className="container mx-auto max-w-6xl p-6">
+            <h1 className="font-bold mb-4 text-lg">Customers</h1>
             {/* Header */}
-            <header className="flex items-center justify-between bg-white rounded mb-4">
-                <Typography variant="h5" component="h1" className="font-semibold">
-                    Customers
-                </Typography>
+            <header className="flex justify-between bg-white rounded mb-4">
+                {/* Left-aligned elements */}
                 <div className="flex items-center">
                     <TextField
                         variant="outlined"
@@ -84,10 +83,10 @@ const Customers = () => {
                         placeholder="Search"
                         value={searchQuery}
                         onChange={handleSearch}
-                        style={{ marginRight: "1rem" }}
+                        style={{marginRight: "1rem"}}
                     />
                     {customers.length > 0 && (
-                        <div style={{ marginRight: "1rem" }}>
+                        <div style={{marginRight: "1rem"}}>
                             <Button
                                 variant={viewMode === "grid" ? "contained" : "outlined"}
                                 onClick={() => setViewMode("grid")}
@@ -103,18 +102,19 @@ const Customers = () => {
                                 }}
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                     stroke-linejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-grid-dots">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M5 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                    <path d="M19 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                    <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                    <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                    <path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                    <path d="M19 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                     fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                                     strokeLinejoin="round"
+                                     className="icon icon-tabler icons-tabler-outline icon-tabler-grid-dots">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M5 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+                                    <path d="M19 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+                                    <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+                                    <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+                                    <path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+                                    <path d="M19 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
                                 </svg>
                             </Button>
 
@@ -132,20 +132,24 @@ const Customers = () => {
                                 }}
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                     stroke-linejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-list">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M9 6l11 0" />
-                                    <path d="M9 12l11 0" />
-                                    <path d="M9 18l11 0" />
-                                    <path d="M5 6l0 .01" />
-                                    <path d="M5 12l0 .01" />
-                                    <path d="M5 18l0 .01" />
+                                     fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                                     strokeLinejoin="round"
+                                     className="icon icon-tabler icons-tabler-outline icon-tabler-list">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M9 6l11 0"/>
+                                    <path d="M9 12l11 0"/>
+                                    <path d="M9 18l11 0"/>
+                                    <path d="M5 6l0 .01"/>
+                                    <path d="M5 12l0 .01"/>
+                                    <path d="M5 18l0 .01"/>
                                 </svg>
                             </Button>
-
                         </div>
                     )}
+                </div>
+
+                {/* Right-aligned Add New Customer button */}
+                <div className="flex items-center">
                     <Button
                         variant="contained"
                         onClick={handleAddModalOpen}
@@ -172,6 +176,7 @@ const Customers = () => {
                 </div>
             </header>
 
+
             {/* Customer Display Section */}
             {filteredCustomers.length === 0 ? (
                 <Box
@@ -185,7 +190,7 @@ const Customers = () => {
                             src="https://mobiles.sahabautos.com/images/DataNotFound.svg?a6502a0b1c3c557085d25733cdff0872"
                             alt="Data Not Found"
                             className="mx-auto mb-4 h-20"
-                            style={{ width: "50%" }}
+                            style={{width: "50%"}}
                         />
                         <Typography variant="h6" gutterBottom>
                             Customers Data Not Found
@@ -195,7 +200,7 @@ const Customers = () => {
                         </Typography>
                         <Button
                             variant="contained"
-                            style={{ marginTop: "1rem" }}
+                            style={{marginTop: "1rem"}}
                             onClick={handleAddModalOpen}
                             startIcon={
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -209,7 +214,7 @@ const Customers = () => {
                             sx={{
                                 backgroundColor: '#2D72B4',
                                 color: 'white',
-                                marginTop:1,
+                                marginTop: 1,
                                 height: 40,
                                 '&:hover': {
                                     backgroundColor: '#245a8d',
@@ -241,7 +246,7 @@ const Customers = () => {
                     ))}
                 </Box>
             ) : (
-                <Box style={{ height: 400, width: "100%" }}>
+                <Box style={{height: 400, width: "100%"}}>
                     <DataGrid
                         rows={filteredCustomers}
                         columns={columns}
@@ -289,7 +294,7 @@ const Customers = () => {
                             label="Customer Name *"
                             value={newCustomer.name}
                             onChange={(e) =>
-                                setNewCustomer({ ...newCustomer, name: e.target.value })
+                                setNewCustomer({...newCustomer, name: e.target.value})
                             }
                             variant="outlined"
                             fullWidth
@@ -299,7 +304,7 @@ const Customers = () => {
                             label="Phone Number *"
                             value={newCustomer.phone}
                             onChange={(e) =>
-                                setNewCustomer({ ...newCustomer, phone: e.target.value })
+                                setNewCustomer({...newCustomer, phone: e.target.value})
                             }
                             variant="outlined"
                             fullWidth
@@ -309,7 +314,7 @@ const Customers = () => {
                             label="Email"
                             value={newCustomer.email}
                             onChange={(e) =>
-                                setNewCustomer({ ...newCustomer, email: e.target.value })
+                                setNewCustomer({...newCustomer, email: e.target.value})
                             }
                             variant="outlined"
                             fullWidth
@@ -318,7 +323,7 @@ const Customers = () => {
                             label="Customer CNIC"
                             value={newCustomer.cnic}
                             onChange={(e) =>
-                                setNewCustomer({ ...newCustomer, cnic: e.target.value })
+                                setNewCustomer({...newCustomer, cnic: e.target.value})
                             }
                             variant="outlined"
                             fullWidth
@@ -327,7 +332,7 @@ const Customers = () => {
                             label="Address"
                             value={newCustomer.address}
                             onChange={(e) =>
-                                setNewCustomer({ ...newCustomer, address: e.target.value })
+                                setNewCustomer({...newCustomer, address: e.target.value})
                             }
                             variant="outlined"
                             multiline

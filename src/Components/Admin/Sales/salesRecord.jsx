@@ -125,9 +125,9 @@ const SalesRecord = () => {
 
     return (
         <div className="main p-6">
-            <h2 className="text-2xl font-bold">Sales Records</h2>
+            <h1 className="font-bold mb-4 text-lg">Sales Record</h1>
             <div className="Record-table mt-4">
-                <Box sx={{ width: "100%", height: "100%" }}>
+                <Box sx={{width: "100%", height: "100%"}}>
                     <DataGrid
                         rows={rows}
                         columns={columns}
